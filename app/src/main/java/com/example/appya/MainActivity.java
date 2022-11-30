@@ -41,7 +41,7 @@ daoUsuario dao;
                 }else if (dao.login(u,p)==1){
                     Usuario ux=dao.getUsuario(u,p);
                     Toast.makeText(this, "Datos correctos",Toast.LENGTH_LONG).show();
-                    Intent i2=new Intent(MainActivity.this,Inicio.class);
+                    Intent i2=new Intent(MainActivity.this,MainActivity2.class);
                     i2.putExtra("Id", ux.getId());
                     startActivity(i2);
                     finish();
@@ -53,9 +53,6 @@ daoUsuario dao;
                 Intent i=new Intent(MainActivity.this,Registrar.class);
                 startActivity(i);
                 break;
-
-
-                
         }
 
     }
