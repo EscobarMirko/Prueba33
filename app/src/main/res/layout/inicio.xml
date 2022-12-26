@@ -44,12 +44,23 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/btnEliminar"
+                android:id="@+id/btnCalendario"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
                 android:background="#0000ff"
+                android:text="Insertar Registro"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#FF0000"
                 android:text="Eliminar"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
@@ -60,8 +71,19 @@
                 android:layout_height="match_parent"
                 android:layout_margin="3dp"
                 android:layout_weight="1"
-                android:background="#FF0000"
+                android:background="#0000ff"
                 android:text="Mostrar"
+                android:textColor="#ffffff"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnMostrarCal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="3dp"
+                android:layout_weight="1"
+                android:background="#FF0000"
+                android:text="Calendario"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
 
@@ -75,6 +97,8 @@
                 android:text="Salir"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
+
+
         </LinearLayout>
 
     </LinearLayout>

@@ -13,7 +13,7 @@ public class daoUsuario {
     ArrayList<Usuario> lista;
     SQLiteDatabase sql;
     String bd = "BDUsuarios";
-    String tabla = "create table if not exists usuario(id integer primary key autoincrement, usuario txt, pass text, nombre text, ap text)";
+    String tabla = "create table if not exists usuario(id integer primary key autoincrement, usuario txt, pass text, nombre text, ap text,titulo text,fecha text, lugar text)";
 
     public daoUsuario(Context c) {
         this.c = c;
@@ -35,6 +35,8 @@ public class daoUsuario {
             return false;
         }
     }
+
+
 
     public int buscar(String u) {
         int x = 0;

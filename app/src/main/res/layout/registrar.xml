@@ -52,6 +52,7 @@
         android:inputType="text" />
 
 
+
     <Button
         android:id="@+id/btnRegRegistrar"
         android:layout_width="match_parent"

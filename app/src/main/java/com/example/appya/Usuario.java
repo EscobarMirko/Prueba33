@@ -2,25 +2,30 @@ package com.example.appya;
 
 public class Usuario {
     int Id;
-    String Nombre, Apellidos, Usuario, Password;
+    String Nombre, Apellidos, Usuario, Password, Titulo, Fecha, Lugar;
 
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellidos, String usuario, String password) {
+    public Usuario(String nombre, String apellidos, String usuario, String password, String titulo, String fecha, String lugar) {
         Nombre = nombre;
         Apellidos = apellidos;
         Usuario = usuario;
         Password = password;
+        Titulo = titulo;
+        Fecha = fecha;
+        Lugar = lugar;
+
     }
 
     public boolean isNull(){
-        if (Nombre.equals("")&&Apellidos.equals("")&&Usuario.equals("")&&Password.equals("")){
+        if (Nombre.equals("")&&Apellidos.equals("")&&Usuario.equals("")&&Password.equals("")&&Titulo.equals("")&&Fecha.equals("")&&Lugar.equals("")){
         return false;
         }else{
             return true;
         }
 }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -29,6 +34,9 @@ public class Usuario {
                 ", Apellidos='" + Apellidos + '\'' +
                 ", Usuario='" + Usuario + '\'' +
                 ", Password='" + Password + '\'' +
+                ", Titulo='" + Titulo + '\'' +
+                ", Fecha='" + Fecha + '\'' +
+                ", Lugar='" + Lugar + '\'' +
                 '}';
     }
 
@@ -70,5 +78,27 @@ public class Usuario {
 
     public void setPassword(String password) {
         Password = password;
+    }
+
+    public String getTitulo() {return Titulo;}
+
+    public void setTitulo(String titulo) {
+        Titulo = titulo;
+    }
+
+    public String getFecha() {
+        return Fecha;
+    }
+
+    public void setFecha(String fecha) {
+        Fecha = fecha;
+    }
+
+    public String getLugar() {
+        return Lugar;
+    }
+
+    public void setLugar(String lugar) {
+        Lugar = lugar;
     }
 }

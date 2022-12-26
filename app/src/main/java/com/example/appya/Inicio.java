@@ -12,7 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Inicio extends AppCompatActivity implements View.OnClickListener {
-    Button btnEditar, btnEliminar, btnMostrar, btnSalir;
+    Button btnEditar, btnEliminar, btnMostrar, btnSalir, btnCalendario,btnMostrarCal;
     TextView nombre;
     int id = 0;
     Usuario u;
@@ -26,17 +26,24 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener {
         btnEditar = (Button) findViewById(R.id.btnEditar);
         btnEliminar = (Button) findViewById(R.id.btnEliminar);
         btnMostrar = (Button) findViewById(R.id.btnMostrar);
+        btnMostrarCal = (Button) findViewById(R.id.btnMostrarCal);
         btnSalir = (Button) findViewById(R.id.btnSalir);
+        btnCalendario = (Button) findViewById(R.id.btnCalendario);
         btnEditar.setOnClickListener(this);
         btnEliminar.setOnClickListener(this);
         btnMostrar.setOnClickListener(this);
         btnSalir.setOnClickListener(this);
+        btnCalendario.setOnClickListener(this);
+        btnMostrarCal.setOnClickListener(this);
+
+
 
         Bundle b = getIntent().getExtras();
         id = b.getInt("Id");
         dao = new daoUsuario(this);
         u = dao.getUsuarioById(id);
         nombre.setText(u.getNombre() + " " + u.getApellidos());
+
     }
 
     @Override
@@ -74,6 +81,8 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener {
             });
                 b.show();
                 break;
+
+
             case R.id.btnMostrar:
                 Intent c = new Intent(Inicio.this, Mostrar.class);
                 startActivity(c);
@@ -83,6 +92,20 @@ public class Inicio extends AppCompatActivity implements View.OnClickListener {
                 startActivity(i2);
                 finish();
                 break;
+
+            case R.id.btnCalendario:
+                Intent c2 = new Intent(Inicio.this, Calendario.class);
+                startActivity(c2);
+                finish();
+                break;
+
+            case R.id.btnMostrarCal:
+                Intent c3 = new Intent(Inicio.this, MostrarCalendario.class);
+                startActivity(c3);
+                finish();
+                break;
+
+
         }
     }
 }
